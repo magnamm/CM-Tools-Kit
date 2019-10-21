@@ -1,0 +1,9 @@
+C:\Users\ruttaphong.w\source\repos\CM Tools Kits\CM Tools Kits\bin\Debug\CM Tools Kits.exe.config
+C:\Users\ruttaphong.w\source\repos\CM Tools Kits\CM Tools Kits\bin\Debug\CM Tools Kits.exe
+C:\Users\ruttaphong.w\source\repos\CM Tools Kits\CM Tools Kits\bin\Debug\CM Tools Kits.pdb
+C:\Users\ruttaphong.w\source\repos\CM Tools Kits\CM Tools Kits\obj\Debug\CM Tools Kits.csprojAssemblyReference.cache
+C:\Users\ruttaphong.w\source\repos\CM Tools Kits\CM Tools Kits\obj\Debug\CM_Tools_Kits.Properties.Resources.resources
+C:\Users\ruttaphong.w\source\repos\CM Tools Kits\CM Tools Kits\obj\Debug\CM Tools Kits.csproj.GenerateResource.cache
+C:\Users\ruttaphong.w\source\repos\CM Tools Kits\CM Tools Kits\obj\Debug\CM Tools Kits.csproj.CoreCompileInputs.cache
+C:\Users\ruttaphong.w\source\repos\CM Tools Kits\CM Tools Kits\obj\Debug\CM Tools Kits.exe
+C:\Users\ruttaphong.w\source\repos\CM Tools Kits\CM Tools Kits\obj\Debug\CM Tools Kits.pdb
