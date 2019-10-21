@@ -72,15 +72,15 @@
             this.dgvSummery = new System.Windows.Forms.DataGridView();
             this.tabBooking = new System.Windows.Forms.TabPage();
             this.toolStrip = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabel4 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripComboBox1 = new System.Windows.Forms.ToolStripComboBox();
-            this.toolStripLabel5 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripTextBox1 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripLabel6 = new System.Windows.Forms.ToolStripLabel();
-            this.toolStripTextBox2 = new System.Windows.Forms.ToolStripTextBox();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.txbClientID = new System.Windows.Forms.ToolStripComboBox();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
+            this.txbBookingID = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripLabel3 = new System.Windows.Forms.ToolStripLabel();
+            this.txbRecipt = new System.Windows.Forms.ToolStripTextBox();
+            this.btnSearch = new System.Windows.Forms.ToolStripButton();
+            this.btnCancel = new System.Windows.Forms.ToolStripButton();
+            this.btnClear = new System.Windows.Forms.ToolStripButton();
             this.tabPayment.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPayment)).BeginInit();
             this.tabBookingPay.SuspendLayout();
@@ -313,6 +313,9 @@
             // 
             this.BGWorker.WorkerReportsProgress = true;
             this.BGWorker.WorkerSupportsCancellation = true;
+            this.BGWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BGWorker_DoWork);
+            this.BGWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.BGWorker_ProgressChanged);
+            this.BGWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BGWorker_RunWorkerCompleted);
             // 
             // statusStrip
             // 
@@ -393,77 +396,77 @@
             this.transactionToolStripMenuItem,
             this.trandetToolStripMenuItem});
             this.MenuView.Name = "MenuView";
-            this.MenuView.Size = new System.Drawing.Size(270, 34);
+            this.MenuView.Size = new System.Drawing.Size(151, 34);
             this.MenuView.Text = "View";
             // 
             // summaryToolStripMenuItem
             // 
             this.summaryToolStripMenuItem.CheckOnClick = true;
             this.summaryToolStripMenuItem.Name = "summaryToolStripMenuItem";
-            this.summaryToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.summaryToolStripMenuItem.Size = new System.Drawing.Size(229, 34);
             this.summaryToolStripMenuItem.Text = "Summary";
             // 
             // bookingToolStripMenuItem
             // 
             this.bookingToolStripMenuItem.CheckOnClick = true;
             this.bookingToolStripMenuItem.Name = "bookingToolStripMenuItem";
-            this.bookingToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.bookingToolStripMenuItem.Size = new System.Drawing.Size(229, 34);
             this.bookingToolStripMenuItem.Text = "Booking";
             // 
             // paymentToolStripMenuItem
             // 
             this.paymentToolStripMenuItem.CheckOnClick = true;
             this.paymentToolStripMenuItem.Name = "paymentToolStripMenuItem";
-            this.paymentToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.paymentToolStripMenuItem.Size = new System.Drawing.Size(229, 34);
             this.paymentToolStripMenuItem.Text = "Payment";
             // 
             // bookingPayToolStripMenuItem
             // 
             this.bookingPayToolStripMenuItem.CheckOnClick = true;
             this.bookingPayToolStripMenuItem.Name = "bookingPayToolStripMenuItem";
-            this.bookingPayToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.bookingPayToolStripMenuItem.Size = new System.Drawing.Size(229, 34);
             this.bookingPayToolStripMenuItem.Text = "Booking Pay";
             // 
             // bookingExtraToolStripMenuItem
             // 
             this.bookingExtraToolStripMenuItem.CheckOnClick = true;
             this.bookingExtraToolStripMenuItem.Name = "bookingExtraToolStripMenuItem";
-            this.bookingExtraToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.bookingExtraToolStripMenuItem.Size = new System.Drawing.Size(229, 34);
             this.bookingExtraToolStripMenuItem.Text = "Booking Extra";
             // 
             // bookingEditToolStripMenuItem
             // 
             this.bookingEditToolStripMenuItem.CheckOnClick = true;
             this.bookingEditToolStripMenuItem.Name = "bookingEditToolStripMenuItem";
-            this.bookingEditToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.bookingEditToolStripMenuItem.Size = new System.Drawing.Size(229, 34);
             this.bookingEditToolStripMenuItem.Text = "Booking Edit";
             // 
             // rsRcuseToolStripMenuItem
             // 
             this.rsRcuseToolStripMenuItem.CheckOnClick = true;
             this.rsRcuseToolStripMenuItem.Name = "rsRcuseToolStripMenuItem";
-            this.rsRcuseToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.rsRcuseToolStripMenuItem.Size = new System.Drawing.Size(229, 34);
             this.rsRcuseToolStripMenuItem.Text = "Rs Rcuse";
             // 
             // bookingClientToolStripMenuItem
             // 
             this.bookingClientToolStripMenuItem.CheckOnClick = true;
             this.bookingClientToolStripMenuItem.Name = "bookingClientToolStripMenuItem";
-            this.bookingClientToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.bookingClientToolStripMenuItem.Size = new System.Drawing.Size(229, 34);
             this.bookingClientToolStripMenuItem.Text = "Booking Client";
             // 
             // transactionToolStripMenuItem
             // 
             this.transactionToolStripMenuItem.CheckOnClick = true;
             this.transactionToolStripMenuItem.Name = "transactionToolStripMenuItem";
-            this.transactionToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.transactionToolStripMenuItem.Size = new System.Drawing.Size(229, 34);
             this.transactionToolStripMenuItem.Text = "Transaction";
             // 
             // trandetToolStripMenuItem
             // 
             this.trandetToolStripMenuItem.CheckOnClick = true;
             this.trandetToolStripMenuItem.Name = "trandetToolStripMenuItem";
-            this.trandetToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.trandetToolStripMenuItem.Size = new System.Drawing.Size(229, 34);
             this.trandetToolStripMenuItem.Text = "Trandet";
             // 
             // toolStripContainer
@@ -548,84 +551,87 @@
             this.toolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel4,
-            this.toolStripComboBox1,
-            this.toolStripLabel5,
-            this.toolStripTextBox1,
-            this.toolStripLabel6,
-            this.toolStripTextBox2,
-            this.toolStripButton1,
-            this.toolStripButton2,
-            this.toolStripButton3});
+            this.toolStripLabel1,
+            this.txbClientID,
+            this.toolStripLabel2,
+            this.txbBookingID,
+            this.toolStripLabel3,
+            this.txbRecipt,
+            this.btnSearch,
+            this.btnCancel,
+            this.btnClear});
             this.toolStrip.Location = new System.Drawing.Point(0, 0);
             this.toolStrip.Name = "toolStrip";
             this.toolStrip.Size = new System.Drawing.Size(1032, 34);
             this.toolStrip.Stretch = true;
             this.toolStrip.TabIndex = 11;
             // 
-            // toolStripLabel4
+            // toolStripLabel1
             // 
-            this.toolStripLabel4.Name = "toolStripLabel4";
-            this.toolStripLabel4.Size = new System.Drawing.Size(79, 29);
-            this.toolStripLabel4.Text = "Client ID";
+            this.toolStripLabel1.Name = "toolStripLabel1";
+            this.toolStripLabel1.Size = new System.Drawing.Size(79, 29);
+            this.toolStripLabel1.Text = "Client ID";
             // 
-            // toolStripComboBox1
+            // txbClientID
             // 
-            this.toolStripComboBox1.Items.AddRange(new object[] {
+            this.txbClientID.Items.AddRange(new object[] {
             "vana",
             "dotgf",
             "am"});
-            this.toolStripComboBox1.Name = "toolStripComboBox1";
-            this.toolStripComboBox1.Size = new System.Drawing.Size(121, 34);
+            this.txbClientID.Name = "txbClientID";
+            this.txbClientID.Size = new System.Drawing.Size(121, 34);
             // 
-            // toolStripLabel5
+            // toolStripLabel2
             // 
-            this.toolStripLabel5.Name = "toolStripLabel5";
-            this.toolStripLabel5.Size = new System.Drawing.Size(101, 29);
-            this.toolStripLabel5.Text = "Booking ID";
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(101, 29);
+            this.toolStripLabel2.Text = "Booking ID";
             // 
-            // toolStripTextBox1
+            // txbBookingID
             // 
-            this.toolStripTextBox1.Name = "toolStripTextBox1";
-            this.toolStripTextBox1.Size = new System.Drawing.Size(100, 34);
+            this.txbBookingID.Name = "txbBookingID";
+            this.txbBookingID.Size = new System.Drawing.Size(100, 34);
             // 
-            // toolStripLabel6
+            // toolStripLabel3
             // 
-            this.toolStripLabel6.Name = "toolStripLabel6";
-            this.toolStripLabel6.Size = new System.Drawing.Size(103, 29);
-            this.toolStripLabel6.Text = "Receipt No.";
+            this.toolStripLabel3.Name = "toolStripLabel3";
+            this.toolStripLabel3.Size = new System.Drawing.Size(103, 29);
+            this.toolStripLabel3.Text = "Receipt No.";
             // 
-            // toolStripTextBox2
+            // txbRecipt
             // 
-            this.toolStripTextBox2.Name = "toolStripTextBox2";
-            this.toolStripTextBox2.Size = new System.Drawing.Size(100, 34);
+            this.txbRecipt.Name = "txbRecipt";
+            this.txbRecipt.Size = new System.Drawing.Size(100, 34);
             // 
-            // toolStripButton1
+            // btnSearch
             // 
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(92, 29);
-            this.toolStripButton1.Text = "Search";
+            this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
+            this.btnSearch.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(92, 29);
+            this.btnSearch.Text = "Search";
+            this.btnSearch.Click += new System.EventHandler(this.BtnSearch_Click);
             // 
-            // toolStripButton2
+            // btnCancel
             // 
-            this.toolStripButton2.Enabled = false;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.toolStripButton2.Size = new System.Drawing.Size(91, 29);
-            this.toolStripButton2.Text = "Cancel";
+            this.btnCancel.Enabled = false;
+            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
+            this.btnCancel.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnCancel.Size = new System.Drawing.Size(91, 29);
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.Click += new System.EventHandler(this.BtnCancel_Click);
             // 
-            // toolStripButton3
+            // btnClear
             // 
-            this.toolStripButton3.Enabled = false;
-            this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
-            this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(79, 29);
-            this.toolStripButton3.Text = "Clear";
+            this.btnClear.Enabled = false;
+            this.btnClear.Image = ((System.Drawing.Image)(resources.GetObject("btnClear.Image")));
+            this.btnClear.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(79, 29);
+            this.btnClear.Text = "Clear";
+            this.btnClear.Click += new System.EventHandler(this.BtnClear_Click);
             // 
             // CM_Booked_View
             // 
@@ -720,14 +726,14 @@
         private System.Windows.Forms.DataGridView dgvSummery;
         private System.Windows.Forms.TabPage tabBooking;
         private System.Windows.Forms.ToolStrip toolStrip;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel4;
-        private System.Windows.Forms.ToolStripComboBox toolStripComboBox1;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel5;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox1;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel6;
-        private System.Windows.Forms.ToolStripTextBox toolStripTextBox2;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
-        private System.Windows.Forms.ToolStripButton toolStripButton3;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
+        private System.Windows.Forms.ToolStripComboBox txbClientID;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
+        private System.Windows.Forms.ToolStripTextBox txbBookingID;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel3;
+        private System.Windows.Forms.ToolStripTextBox txbRecipt;
+        private System.Windows.Forms.ToolStripButton btnSearch;
+        private System.Windows.Forms.ToolStripButton btnCancel;
+        private System.Windows.Forms.ToolStripButton btnClear;
     }
 }
