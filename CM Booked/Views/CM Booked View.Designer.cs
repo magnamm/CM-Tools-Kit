@@ -313,9 +313,6 @@
             // 
             this.BGWorker.WorkerReportsProgress = true;
             this.BGWorker.WorkerSupportsCancellation = true;
-            this.BGWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BGWorker_DoWork);
-            this.BGWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.BGWorker_ProgressChanged);
-            this.BGWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BGWorker_RunWorkerCompleted);
             // 
             // statusStrip
             // 
@@ -325,7 +322,7 @@
             this.labCurrentTask,
             this.CurrentProgressBar,
             this.labStatus});
-            this.statusStrip.Location = new System.Drawing.Point(0, 0);
+            this.statusStrip.Location = new System.Drawing.Point(0, 25);
             this.statusStrip.Name = "statusStrip";
             this.statusStrip.Size = new System.Drawing.Size(1032, 32);
             this.statusStrip.TabIndex = 3;
@@ -479,12 +476,10 @@
             // toolStripContainer.ContentPanel
             // 
             this.toolStripContainer.ContentPanel.Controls.Add(this.tabViews);
-            this.toolStripContainer.ContentPanel.Size = new System.Drawing.Size(1032, 534);
+            this.toolStripContainer.ContentPanel.Size = new System.Drawing.Size(1032, 484);
             this.toolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.toolStripContainer.LeftToolStripPanelVisible = false;
             this.toolStripContainer.Location = new System.Drawing.Point(0, 33);
             this.toolStripContainer.Name = "toolStripContainer";
-            this.toolStripContainer.RightToolStripPanelVisible = false;
             this.toolStripContainer.Size = new System.Drawing.Size(1032, 600);
             this.toolStripContainer.TabIndex = 5;
             this.toolStripContainer.Text = "toolStripContainer2";
@@ -548,7 +543,6 @@
             // toolStrip
             // 
             this.toolStrip.Dock = System.Windows.Forms.DockStyle.None;
-            this.toolStrip.GripStyle = System.Windows.Forms.ToolStripGripStyle.Hidden;
             this.toolStrip.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripLabel1,

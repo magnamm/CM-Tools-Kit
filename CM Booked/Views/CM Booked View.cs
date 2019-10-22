@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -28,14 +29,22 @@ namespace CM_Booked.Views
             EnabledToggle(btnCancel);
             EnabledToggle(btnSearch);
             //All empty
-            if(string.IsNullOrWhiteSpace(txbClientID.Text) && 
-                string.IsNullOrWhiteSpace(txbBookingID.Text) && 
+            if (string.IsNullOrWhiteSpace(txbClientID.Text) &&
+                string.IsNullOrWhiteSpace(txbBookingID.Text) &&
                 string.IsNullOrWhiteSpace(txbRecipt.Text))
             {
+
                 string cmd = "select * from RPTR_BookingSalesbyExtraitem where BOOKINGID in (select bking_id from booking where bking_date = '" + Modules.Connection.getToday() + "' and bking_name = 'Admission Online Revenue');";
 
                 Modules.Connection.DataRequest(dgvSummery, cmd);
             }
+            else
+            {
+                string cmd = "select * from RPTR_BookingSalesbyExtraitem where BOOKINGID in (select bking_id from booking where bking_date = '" + Modules.Connection.getToday() + "' and bking_name = 'Admission Online Revenue');";
+                Modules.Connection.DataRequest(dgvSummery, cmd);
+
+            }
+
         }
 
         private void BtnCancel_Click(object sender, EventArgs e)
@@ -47,21 +56,6 @@ namespace CM_Booked.Views
         private void BtnClear_Click(object sender, EventArgs e)
         {
             EnabledToggle(btnClear);
-        }
-
-        private void BGWorker_DoWork(object sender, DoWorkEventArgs e)
-        {
-
-        }
-
-        private void BGWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
-        {
-
-        }
-
-        private void BGWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-
         }
     }
 }
