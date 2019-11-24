@@ -20,6 +20,10 @@ namespace CM_Booked.Modules
         {
             return DateTime.Today.Year.ToString() + "-" + DateTime.Today.Month.ToString() + "-" + DateTime.Today.Day.ToString() + " 00:00:00";
         }
+        public static string getToday(DateTime date)
+        {
+            return date.Year.ToString() + "-" + date.Month.ToString() + "-" + date.Day.ToString() + " 00:00:00";
+        }
 
 
         public static SqlConnection con = new SqlConnection(sqlConnectionString);
@@ -80,7 +84,7 @@ namespace CM_Booked.Modules
             }
         }
 
-        public static void DataRequest(DataGridView target,string queryCommand)
+        public static void DataRequest(DataGridView target, string queryCommand)
         {
             using (SqlConnection connection = new SqlConnection(sqlConnectionString))
             {
@@ -113,6 +117,59 @@ namespace CM_Booked.Modules
                 }
 
                 connection.Close();
+            }
+        }
+
+
+        public static DataTable DataTableRequest(string queryCommand)
+        {
+            //using (SqlConnection conn = new SqlConnection(sqlConnectionString))
+            //{
+            //    //conn.Open();
+            //    ////MessageBox.Show("connection open");
+            //    ////MessageBox.Show(queryCommand);
+            //    //SqlDataAdapter dataAdapter = new SqlDataAdapter(queryCommand, conn);
+            //    DataTable dataTable = new DataTable();
+            //    ////MessageBox.Show("Data read");
+
+            //    //dataAdapter.Fill(dataTable);
+            //    conn.Close();
+            //    ////MessageBox.Show("connection close");
+            //    return dataTable;
+            //}
+
+            using (SqlConnection connection = new SqlConnection(sqlConnectionString))
+            {
+                connection.Open();
+
+                SqlCommand command = connection.CreateCommand();
+                SqlDataAdapter dataAdapter = new SqlDataAdapter();
+                DataSet dataSet = new DataSet();
+                DataTable dataTable = new DataTable();
+
+                // Must assign both transaction object and connection
+                // to Command object for a pending local transaction
+                command.Connection = connection;
+                //command.Transaction = transaction;
+
+                try
+                {
+                    command.CommandText = queryCommand;
+
+                    dataAdapter.SelectCommand = command;
+                    dataAdapter.Fill(dataTable);
+
+                    return dataTable;
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Commit Exception Type: " + ex.GetType().ToString() +
+                        "\nMessage: " + ex.Message);
+                }
+
+                connection.Close();
+                return dataTable;
             }
         }
 

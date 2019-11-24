@@ -8,3 +8,5 @@ C:\Users\ruttaphong.w\source\repos\CM Tools Kits\CM-Tools-Kit\CM Booked\obj\Debu
 C:\Users\ruttaphong.w\source\repos\CM Tools Kits\CM-Tools-Kit\CM Booked\obj\Debug\CM Booked.csproj.CoreCompileInputs.cache
 C:\Users\ruttaphong.w\source\repos\CM Tools Kits\CM-Tools-Kit\CM Booked\obj\Debug\CM Booked.exe
 C:\Users\ruttaphong.w\source\repos\CM Tools Kits\CM-Tools-Kit\CM Booked\obj\Debug\CM Booked.pdb
+C:\Users\ruttaphong.w\source\repos\CM Tools Kits\CM-Tools-Kit\CM Booked\obj\Debug\CM_Booked.Views.WebBookingToday.resources
+C:\Users\ruttaphong.w\source\repos\CM Tools Kits\CM-Tools-Kit\CM Booked\obj\Debug\CM_Booked.Views.BeachHut_Cabana.resources

@@ -1,0 +1,10 @@
+C:\Users\ruttaphong.w\source\repos\CM Tools Kits\CM-Tools-Kit\CM Web API\bin\Debug\CM Web API.exe.config
+C:\Users\ruttaphong.w\source\repos\CM Tools Kits\CM-Tools-Kit\CM Web API\bin\Debug\CM Web API.exe
+C:\Users\ruttaphong.w\source\repos\CM Tools Kits\CM-Tools-Kit\CM Web API\bin\Debug\CM Web API.pdb
+C:\Users\ruttaphong.w\source\repos\CM Tools Kits\CM-Tools-Kit\CM Web API\obj\Debug\CM Web API.csprojAssemblyReference.cache
+C:\Users\ruttaphong.w\source\repos\CM Tools Kits\CM-Tools-Kit\CM Web API\obj\Debug\CM_Web_API.Form1.resources
+C:\Users\ruttaphong.w\source\repos\CM Tools Kits\CM-Tools-Kit\CM Web API\obj\Debug\CM_Web_API.Properties.Resources.resources
+C:\Users\ruttaphong.w\source\repos\CM Tools Kits\CM-Tools-Kit\CM Web API\obj\Debug\CM Web API.csproj.GenerateResource.cache
+C:\Users\ruttaphong.w\source\repos\CM Tools Kits\CM-Tools-Kit\CM Web API\obj\Debug\CM Web API.csproj.CoreCompileInputs.cache
+C:\Users\ruttaphong.w\source\repos\CM Tools Kits\CM-Tools-Kit\CM Web API\obj\Debug\CM Web API.exe
+C:\Users\ruttaphong.w\source\repos\CM Tools Kits\CM-Tools-Kit\CM Web API\obj\Debug\CM Web API.pdb

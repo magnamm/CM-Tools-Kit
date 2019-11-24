@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CM_Booked_View));
             this.tabPayment = new System.Windows.Forms.TabPage();
             this.dgvPayment = new System.Windows.Forms.DataGridView();
@@ -56,16 +57,16 @@
             this.menuEdit = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuHelp = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuView = new System.Windows.Forms.ToolStripMenuItem();
-            this.summaryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bookingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.paymentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bookingPayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bookingExtraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bookingEditToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rsRcuseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bookingClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.transactionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.trandetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuItemSummary = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuItemBooking = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuItemPayment = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuItemBookingPay = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuItemBookingExtra = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuItemBookingEdit = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuItemRsRcuse = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuItemBookingClient = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuItemTransaction = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenuItemTrandet = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripContainer = new System.Windows.Forms.ToolStripContainer();
             this.tabViews = new System.Windows.Forms.TabControl();
             this.tabSummary = new System.Windows.Forms.TabPage();
@@ -81,6 +82,8 @@
             this.btnSearch = new System.Windows.Forms.ToolStripButton();
             this.btnCancel = new System.Windows.Forms.ToolStripButton();
             this.btnClear = new System.Windows.Forms.ToolStripButton();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnToday = new System.Windows.Forms.ToolStripButton();
             this.tabPayment.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPayment)).BeginInit();
             this.tabBookingPay.SuspendLayout();
@@ -109,6 +112,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvSummery)).BeginInit();
             this.tabBooking.SuspendLayout();
             this.toolStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // tabPayment
@@ -117,7 +121,7 @@
             this.tabPayment.Location = new System.Drawing.Point(4, 29);
             this.tabPayment.Name = "tabPayment";
             this.tabPayment.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPayment.Size = new System.Drawing.Size(922, 343);
+            this.tabPayment.Size = new System.Drawing.Size(1093, 365);
             this.tabPayment.TabIndex = 1;
             this.tabPayment.Text = "Payment";
             this.tabPayment.UseVisualStyleBackColor = true;
@@ -132,7 +136,7 @@
             this.dgvPayment.Name = "dgvPayment";
             this.dgvPayment.ReadOnly = true;
             this.dgvPayment.RowHeadersWidth = 62;
-            this.dgvPayment.Size = new System.Drawing.Size(916, 337);
+            this.dgvPayment.Size = new System.Drawing.Size(1087, 359);
             this.dgvPayment.TabIndex = 0;
             // 
             // tabBookingPay
@@ -140,7 +144,7 @@
             this.tabBookingPay.Controls.Add(this.dgvBookingPay);
             this.tabBookingPay.Location = new System.Drawing.Point(4, 29);
             this.tabBookingPay.Name = "tabBookingPay";
-            this.tabBookingPay.Size = new System.Drawing.Size(922, 343);
+            this.tabBookingPay.Size = new System.Drawing.Size(1093, 365);
             this.tabBookingPay.TabIndex = 2;
             this.tabBookingPay.Text = "Booking Pay";
             this.tabBookingPay.UseVisualStyleBackColor = true;
@@ -155,7 +159,7 @@
             this.dgvBookingPay.Name = "dgvBookingPay";
             this.dgvBookingPay.ReadOnly = true;
             this.dgvBookingPay.RowHeadersWidth = 62;
-            this.dgvBookingPay.Size = new System.Drawing.Size(922, 343);
+            this.dgvBookingPay.Size = new System.Drawing.Size(1093, 365);
             this.dgvBookingPay.TabIndex = 1;
             // 
             // tabBookingExtra
@@ -163,7 +167,7 @@
             this.tabBookingExtra.Controls.Add(this.dgvBookingExtra);
             this.tabBookingExtra.Location = new System.Drawing.Point(4, 29);
             this.tabBookingExtra.Name = "tabBookingExtra";
-            this.tabBookingExtra.Size = new System.Drawing.Size(922, 343);
+            this.tabBookingExtra.Size = new System.Drawing.Size(1093, 365);
             this.tabBookingExtra.TabIndex = 3;
             this.tabBookingExtra.Text = "Booking Extra";
             this.tabBookingExtra.UseVisualStyleBackColor = true;
@@ -178,7 +182,7 @@
             this.dgvBookingExtra.Name = "dgvBookingExtra";
             this.dgvBookingExtra.ReadOnly = true;
             this.dgvBookingExtra.RowHeadersWidth = 62;
-            this.dgvBookingExtra.Size = new System.Drawing.Size(922, 343);
+            this.dgvBookingExtra.Size = new System.Drawing.Size(1093, 365);
             this.dgvBookingExtra.TabIndex = 1;
             // 
             // tabBookingAudit
@@ -186,7 +190,7 @@
             this.tabBookingAudit.Controls.Add(this.dgvBookingAudit);
             this.tabBookingAudit.Location = new System.Drawing.Point(4, 29);
             this.tabBookingAudit.Name = "tabBookingAudit";
-            this.tabBookingAudit.Size = new System.Drawing.Size(922, 343);
+            this.tabBookingAudit.Size = new System.Drawing.Size(1093, 365);
             this.tabBookingAudit.TabIndex = 4;
             this.tabBookingAudit.Text = "Booking Audit";
             this.tabBookingAudit.UseVisualStyleBackColor = true;
@@ -201,7 +205,7 @@
             this.dgvBookingAudit.Name = "dgvBookingAudit";
             this.dgvBookingAudit.ReadOnly = true;
             this.dgvBookingAudit.RowHeadersWidth = 62;
-            this.dgvBookingAudit.Size = new System.Drawing.Size(922, 343);
+            this.dgvBookingAudit.Size = new System.Drawing.Size(1093, 365);
             this.dgvBookingAudit.TabIndex = 1;
             // 
             // tabRsRcuse
@@ -209,7 +213,7 @@
             this.tabRsRcuse.Controls.Add(this.dgvRsrcuse);
             this.tabRsRcuse.Location = new System.Drawing.Point(4, 29);
             this.tabRsRcuse.Name = "tabRsRcuse";
-            this.tabRsRcuse.Size = new System.Drawing.Size(922, 343);
+            this.tabRsRcuse.Size = new System.Drawing.Size(1093, 365);
             this.tabRsRcuse.TabIndex = 5;
             this.tabRsRcuse.Text = "Rs Rcuse";
             this.tabRsRcuse.UseVisualStyleBackColor = true;
@@ -224,7 +228,7 @@
             this.dgvRsrcuse.Name = "dgvRsrcuse";
             this.dgvRsrcuse.ReadOnly = true;
             this.dgvRsrcuse.RowHeadersWidth = 62;
-            this.dgvRsrcuse.Size = new System.Drawing.Size(922, 343);
+            this.dgvRsrcuse.Size = new System.Drawing.Size(1093, 365);
             this.dgvRsrcuse.TabIndex = 1;
             // 
             // tabBookingClient
@@ -232,7 +236,7 @@
             this.tabBookingClient.Controls.Add(this.dgvBookingClient);
             this.tabBookingClient.Location = new System.Drawing.Point(4, 29);
             this.tabBookingClient.Name = "tabBookingClient";
-            this.tabBookingClient.Size = new System.Drawing.Size(922, 343);
+            this.tabBookingClient.Size = new System.Drawing.Size(1093, 365);
             this.tabBookingClient.TabIndex = 6;
             this.tabBookingClient.Text = "Booking Client";
             this.tabBookingClient.UseVisualStyleBackColor = true;
@@ -247,7 +251,7 @@
             this.dgvBookingClient.Name = "dgvBookingClient";
             this.dgvBookingClient.ReadOnly = true;
             this.dgvBookingClient.RowHeadersWidth = 62;
-            this.dgvBookingClient.Size = new System.Drawing.Size(922, 343);
+            this.dgvBookingClient.Size = new System.Drawing.Size(1093, 365);
             this.dgvBookingClient.TabIndex = 1;
             // 
             // tabTransaction
@@ -255,7 +259,7 @@
             this.tabTransaction.Controls.Add(this.dgvTransaction);
             this.tabTransaction.Location = new System.Drawing.Point(4, 29);
             this.tabTransaction.Name = "tabTransaction";
-            this.tabTransaction.Size = new System.Drawing.Size(922, 343);
+            this.tabTransaction.Size = new System.Drawing.Size(1093, 365);
             this.tabTransaction.TabIndex = 7;
             this.tabTransaction.Text = "Transaction";
             this.tabTransaction.UseVisualStyleBackColor = true;
@@ -270,7 +274,7 @@
             this.dgvTransaction.Name = "dgvTransaction";
             this.dgvTransaction.ReadOnly = true;
             this.dgvTransaction.RowHeadersWidth = 62;
-            this.dgvTransaction.Size = new System.Drawing.Size(922, 343);
+            this.dgvTransaction.Size = new System.Drawing.Size(1093, 365);
             this.dgvTransaction.TabIndex = 1;
             // 
             // tabTrandet
@@ -278,7 +282,7 @@
             this.tabTrandet.Controls.Add(this.dgvTrandet);
             this.tabTrandet.Location = new System.Drawing.Point(4, 29);
             this.tabTrandet.Name = "tabTrandet";
-            this.tabTrandet.Size = new System.Drawing.Size(922, 343);
+            this.tabTrandet.Size = new System.Drawing.Size(1093, 365);
             this.tabTrandet.TabIndex = 8;
             this.tabTrandet.Text = "Trandet";
             this.tabTrandet.UseVisualStyleBackColor = true;
@@ -293,7 +297,7 @@
             this.dgvTrandet.Name = "dgvTrandet";
             this.dgvTrandet.ReadOnly = true;
             this.dgvTrandet.RowHeadersWidth = 62;
-            this.dgvTrandet.Size = new System.Drawing.Size(922, 343);
+            this.dgvTrandet.Size = new System.Drawing.Size(1093, 365);
             this.dgvTrandet.TabIndex = 1;
             // 
             // dgvBooking
@@ -306,7 +310,7 @@
             this.dgvBooking.Name = "dgvBooking";
             this.dgvBooking.ReadOnly = true;
             this.dgvBooking.RowHeadersWidth = 62;
-            this.dgvBooking.Size = new System.Drawing.Size(916, 337);
+            this.dgvBooking.Size = new System.Drawing.Size(1087, 359);
             this.dgvBooking.TabIndex = 0;
             // 
             // BGWorker
@@ -322,9 +326,9 @@
             this.labCurrentTask,
             this.CurrentProgressBar,
             this.labStatus});
-            this.statusStrip.Location = new System.Drawing.Point(0, 25);
+            this.statusStrip.Location = new System.Drawing.Point(0, 0);
             this.statusStrip.Name = "statusStrip";
-            this.statusStrip.Size = new System.Drawing.Size(1032, 32);
+            this.statusStrip.Size = new System.Drawing.Size(1101, 32);
             this.statusStrip.TabIndex = 3;
             this.statusStrip.Text = "statusStrip";
             // 
@@ -355,7 +359,7 @@
             this.menuStrip.Location = new System.Drawing.Point(0, 0);
             this.menuStrip.Name = "menuStrip";
             this.menuStrip.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
-            this.menuStrip.Size = new System.Drawing.Size(1032, 33);
+            this.menuStrip.Size = new System.Drawing.Size(1101, 33);
             this.menuStrip.TabIndex = 4;
             this.menuStrip.Text = "menuStrip2";
             // 
@@ -382,89 +386,99 @@
             // MenuView
             // 
             this.MenuView.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.summaryToolStripMenuItem,
-            this.bookingToolStripMenuItem,
-            this.paymentToolStripMenuItem,
-            this.bookingPayToolStripMenuItem,
-            this.bookingExtraToolStripMenuItem,
-            this.bookingEditToolStripMenuItem,
-            this.rsRcuseToolStripMenuItem,
-            this.bookingClientToolStripMenuItem,
-            this.transactionToolStripMenuItem,
-            this.trandetToolStripMenuItem});
+            this.MenuItemSummary,
+            this.MenuItemBooking,
+            this.MenuItemPayment,
+            this.MenuItemBookingPay,
+            this.MenuItemBookingExtra,
+            this.MenuItemBookingEdit,
+            this.MenuItemRsRcuse,
+            this.MenuItemBookingClient,
+            this.MenuItemTransaction,
+            this.MenuItemTrandet});
             this.MenuView.Name = "MenuView";
             this.MenuView.Size = new System.Drawing.Size(151, 34);
             this.MenuView.Text = "View";
             // 
-            // summaryToolStripMenuItem
+            // MenuItemSummary
             // 
-            this.summaryToolStripMenuItem.CheckOnClick = true;
-            this.summaryToolStripMenuItem.Name = "summaryToolStripMenuItem";
-            this.summaryToolStripMenuItem.Size = new System.Drawing.Size(229, 34);
-            this.summaryToolStripMenuItem.Text = "Summary";
+            this.MenuItemSummary.CheckOnClick = true;
+            this.MenuItemSummary.Name = "MenuItemSummary";
+            this.MenuItemSummary.Size = new System.Drawing.Size(229, 34);
+            this.MenuItemSummary.Text = "Summary";
+            this.MenuItemSummary.Click += new System.EventHandler(this.MenuItemSummary_Click);
             // 
-            // bookingToolStripMenuItem
+            // MenuItemBooking
             // 
-            this.bookingToolStripMenuItem.CheckOnClick = true;
-            this.bookingToolStripMenuItem.Name = "bookingToolStripMenuItem";
-            this.bookingToolStripMenuItem.Size = new System.Drawing.Size(229, 34);
-            this.bookingToolStripMenuItem.Text = "Booking";
+            this.MenuItemBooking.CheckOnClick = true;
+            this.MenuItemBooking.Name = "MenuItemBooking";
+            this.MenuItemBooking.Size = new System.Drawing.Size(229, 34);
+            this.MenuItemBooking.Text = "Booking";
+            this.MenuItemBooking.Click += new System.EventHandler(this.MenuItemSummary_Click);
             // 
-            // paymentToolStripMenuItem
+            // MenuItemPayment
             // 
-            this.paymentToolStripMenuItem.CheckOnClick = true;
-            this.paymentToolStripMenuItem.Name = "paymentToolStripMenuItem";
-            this.paymentToolStripMenuItem.Size = new System.Drawing.Size(229, 34);
-            this.paymentToolStripMenuItem.Text = "Payment";
+            this.MenuItemPayment.CheckOnClick = true;
+            this.MenuItemPayment.Name = "MenuItemPayment";
+            this.MenuItemPayment.Size = new System.Drawing.Size(229, 34);
+            this.MenuItemPayment.Text = "Payment";
+            this.MenuItemPayment.Click += new System.EventHandler(this.MenuItemSummary_Click);
             // 
-            // bookingPayToolStripMenuItem
+            // MenuItemBookingPay
             // 
-            this.bookingPayToolStripMenuItem.CheckOnClick = true;
-            this.bookingPayToolStripMenuItem.Name = "bookingPayToolStripMenuItem";
-            this.bookingPayToolStripMenuItem.Size = new System.Drawing.Size(229, 34);
-            this.bookingPayToolStripMenuItem.Text = "Booking Pay";
+            this.MenuItemBookingPay.CheckOnClick = true;
+            this.MenuItemBookingPay.Name = "MenuItemBookingPay";
+            this.MenuItemBookingPay.Size = new System.Drawing.Size(229, 34);
+            this.MenuItemBookingPay.Text = "Booking Pay";
+            this.MenuItemBookingPay.Click += new System.EventHandler(this.MenuItemSummary_Click);
             // 
-            // bookingExtraToolStripMenuItem
+            // MenuItemBookingExtra
             // 
-            this.bookingExtraToolStripMenuItem.CheckOnClick = true;
-            this.bookingExtraToolStripMenuItem.Name = "bookingExtraToolStripMenuItem";
-            this.bookingExtraToolStripMenuItem.Size = new System.Drawing.Size(229, 34);
-            this.bookingExtraToolStripMenuItem.Text = "Booking Extra";
+            this.MenuItemBookingExtra.CheckOnClick = true;
+            this.MenuItemBookingExtra.Name = "MenuItemBookingExtra";
+            this.MenuItemBookingExtra.Size = new System.Drawing.Size(229, 34);
+            this.MenuItemBookingExtra.Text = "Booking Extra";
+            this.MenuItemBookingExtra.Click += new System.EventHandler(this.MenuItemSummary_Click);
             // 
-            // bookingEditToolStripMenuItem
+            // MenuItemBookingEdit
             // 
-            this.bookingEditToolStripMenuItem.CheckOnClick = true;
-            this.bookingEditToolStripMenuItem.Name = "bookingEditToolStripMenuItem";
-            this.bookingEditToolStripMenuItem.Size = new System.Drawing.Size(229, 34);
-            this.bookingEditToolStripMenuItem.Text = "Booking Edit";
+            this.MenuItemBookingEdit.CheckOnClick = true;
+            this.MenuItemBookingEdit.Name = "MenuItemBookingEdit";
+            this.MenuItemBookingEdit.Size = new System.Drawing.Size(229, 34);
+            this.MenuItemBookingEdit.Text = "Booking Edit";
+            this.MenuItemBookingEdit.Click += new System.EventHandler(this.MenuItemSummary_Click);
             // 
-            // rsRcuseToolStripMenuItem
+            // MenuItemRsRcuse
             // 
-            this.rsRcuseToolStripMenuItem.CheckOnClick = true;
-            this.rsRcuseToolStripMenuItem.Name = "rsRcuseToolStripMenuItem";
-            this.rsRcuseToolStripMenuItem.Size = new System.Drawing.Size(229, 34);
-            this.rsRcuseToolStripMenuItem.Text = "Rs Rcuse";
+            this.MenuItemRsRcuse.CheckOnClick = true;
+            this.MenuItemRsRcuse.Name = "MenuItemRsRcuse";
+            this.MenuItemRsRcuse.Size = new System.Drawing.Size(229, 34);
+            this.MenuItemRsRcuse.Text = "Rs Rcuse";
+            this.MenuItemRsRcuse.Click += new System.EventHandler(this.MenuItemSummary_Click);
             // 
-            // bookingClientToolStripMenuItem
+            // MenuItemBookingClient
             // 
-            this.bookingClientToolStripMenuItem.CheckOnClick = true;
-            this.bookingClientToolStripMenuItem.Name = "bookingClientToolStripMenuItem";
-            this.bookingClientToolStripMenuItem.Size = new System.Drawing.Size(229, 34);
-            this.bookingClientToolStripMenuItem.Text = "Booking Client";
+            this.MenuItemBookingClient.CheckOnClick = true;
+            this.MenuItemBookingClient.Name = "MenuItemBookingClient";
+            this.MenuItemBookingClient.Size = new System.Drawing.Size(229, 34);
+            this.MenuItemBookingClient.Text = "Booking Client";
+            this.MenuItemBookingClient.Click += new System.EventHandler(this.MenuItemSummary_Click);
             // 
-            // transactionToolStripMenuItem
+            // MenuItemTransaction
             // 
-            this.transactionToolStripMenuItem.CheckOnClick = true;
-            this.transactionToolStripMenuItem.Name = "transactionToolStripMenuItem";
-            this.transactionToolStripMenuItem.Size = new System.Drawing.Size(229, 34);
-            this.transactionToolStripMenuItem.Text = "Transaction";
+            this.MenuItemTransaction.CheckOnClick = true;
+            this.MenuItemTransaction.Name = "MenuItemTransaction";
+            this.MenuItemTransaction.Size = new System.Drawing.Size(229, 34);
+            this.MenuItemTransaction.Text = "Transaction";
+            this.MenuItemTransaction.Click += new System.EventHandler(this.MenuItemSummary_Click);
             // 
-            // trandetToolStripMenuItem
+            // MenuItemTrandet
             // 
-            this.trandetToolStripMenuItem.CheckOnClick = true;
-            this.trandetToolStripMenuItem.Name = "trandetToolStripMenuItem";
-            this.trandetToolStripMenuItem.Size = new System.Drawing.Size(229, 34);
-            this.trandetToolStripMenuItem.Text = "Trandet";
+            this.MenuItemTrandet.CheckOnClick = true;
+            this.MenuItemTrandet.Name = "MenuItemTrandet";
+            this.MenuItemTrandet.Size = new System.Drawing.Size(229, 34);
+            this.MenuItemTrandet.Text = "Trandet";
+            this.MenuItemTrandet.Click += new System.EventHandler(this.MenuItemSummary_Click);
             // 
             // toolStripContainer
             // 
@@ -476,11 +490,11 @@
             // toolStripContainer.ContentPanel
             // 
             this.toolStripContainer.ContentPanel.Controls.Add(this.tabViews);
-            this.toolStripContainer.ContentPanel.Size = new System.Drawing.Size(1032, 484);
+            this.toolStripContainer.ContentPanel.Size = new System.Drawing.Size(1101, 398);
             this.toolStripContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.toolStripContainer.Location = new System.Drawing.Point(0, 33);
             this.toolStripContainer.Name = "toolStripContainer";
-            this.toolStripContainer.Size = new System.Drawing.Size(1032, 600);
+            this.toolStripContainer.Size = new System.Drawing.Size(1101, 464);
             this.toolStripContainer.TabIndex = 5;
             this.toolStripContainer.Text = "toolStripContainer2";
             // 
@@ -500,10 +514,11 @@
             this.tabViews.Controls.Add(this.tabBookingClient);
             this.tabViews.Controls.Add(this.tabTransaction);
             this.tabViews.Controls.Add(this.tabTrandet);
-            this.tabViews.Location = new System.Drawing.Point(47, 66);
+            this.tabViews.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabViews.Location = new System.Drawing.Point(0, 0);
             this.tabViews.Name = "tabViews";
             this.tabViews.SelectedIndex = 0;
-            this.tabViews.Size = new System.Drawing.Size(930, 376);
+            this.tabViews.Size = new System.Drawing.Size(1101, 398);
             this.tabViews.TabIndex = 10;
             // 
             // tabSummary
@@ -511,10 +526,9 @@
             this.tabSummary.Controls.Add(this.dgvSummery);
             this.tabSummary.Location = new System.Drawing.Point(4, 29);
             this.tabSummary.Name = "tabSummary";
-            this.tabSummary.Size = new System.Drawing.Size(922, 343);
+            this.tabSummary.Size = new System.Drawing.Size(1093, 365);
             this.tabSummary.TabIndex = 9;
             this.tabSummary.Text = "Summary";
-            this.tabSummary.UseVisualStyleBackColor = true;
             // 
             // dgvSummery
             // 
@@ -526,7 +540,7 @@
             this.dgvSummery.Name = "dgvSummery";
             this.dgvSummery.ReadOnly = true;
             this.dgvSummery.RowHeadersWidth = 62;
-            this.dgvSummery.Size = new System.Drawing.Size(922, 343);
+            this.dgvSummery.Size = new System.Drawing.Size(1093, 365);
             this.dgvSummery.TabIndex = 1;
             // 
             // tabBooking
@@ -535,7 +549,7 @@
             this.tabBooking.Location = new System.Drawing.Point(4, 29);
             this.tabBooking.Name = "tabBooking";
             this.tabBooking.Padding = new System.Windows.Forms.Padding(3);
-            this.tabBooking.Size = new System.Drawing.Size(922, 343);
+            this.tabBooking.Size = new System.Drawing.Size(1093, 365);
             this.tabBooking.TabIndex = 0;
             this.tabBooking.Text = "Booking";
             this.tabBooking.UseVisualStyleBackColor = true;
@@ -553,10 +567,11 @@
             this.txbRecipt,
             this.btnSearch,
             this.btnCancel,
-            this.btnClear});
+            this.btnClear,
+            this.btnToday});
             this.toolStrip.Location = new System.Drawing.Point(0, 0);
             this.toolStrip.Name = "toolStrip";
-            this.toolStrip.Size = new System.Drawing.Size(1032, 34);
+            this.toolStrip.Size = new System.Drawing.Size(1101, 34);
             this.toolStrip.Stretch = true;
             this.toolStrip.TabIndex = 11;
             // 
@@ -568,12 +583,12 @@
             // 
             // txbClientID
             // 
-            this.txbClientID.Items.AddRange(new object[] {
-            "vana",
-            "dotgf",
-            "am"});
+            this.txbClientID.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txbClientID.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.HistoryList;
             this.txbClientID.Name = "txbClientID";
             this.txbClientID.Size = new System.Drawing.Size(121, 34);
+            this.txbClientID.Validating += new System.ComponentModel.CancelEventHandler(this.TxbClientID_Validating);
+            this.txbClientID.TextChanged += new System.EventHandler(this.TxbClientID_TextChanged);
             // 
             // toolStripLabel2
             // 
@@ -585,6 +600,7 @@
             // 
             this.txbBookingID.Name = "txbBookingID";
             this.txbBookingID.Size = new System.Drawing.Size(100, 34);
+            this.txbBookingID.TextChanged += new System.EventHandler(this.TxbBookingID_TextChanged);
             // 
             // toolStripLabel3
             // 
@@ -596,6 +612,7 @@
             // 
             this.txbRecipt.Name = "txbRecipt";
             this.txbRecipt.Size = new System.Drawing.Size(100, 34);
+            this.txbRecipt.TextChanged += new System.EventHandler(this.TxbRecipt_TextChanged);
             // 
             // btnSearch
             // 
@@ -627,11 +644,26 @@
             this.btnClear.Text = "Clear";
             this.btnClear.Click += new System.EventHandler(this.BtnClear_Click);
             // 
+            // errorProvider
+            // 
+            this.errorProvider.ContainerControl = this;
+            // 
+            // btnToday
+            // 
+            this.btnToday.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
+            this.btnToday.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnToday.Image = ((System.Drawing.Image)(resources.GetObject("btnToday.Image")));
+            this.btnToday.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnToday.Name = "btnToday";
+            this.btnToday.Size = new System.Drawing.Size(65, 29);
+            this.btnToday.Text = "Today";
+            this.btnToday.Click += new System.EventHandler(this.BtnToday_Click);
+            // 
             // CM_Booked_View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1032, 633);
+            this.ClientSize = new System.Drawing.Size(1101, 497);
             this.Controls.Add(this.toolStripContainer);
             this.Controls.Add(this.menuStrip);
             this.Name = "CM_Booked_View";
@@ -670,6 +702,7 @@
             this.tabBooking.ResumeLayout(false);
             this.toolStrip.ResumeLayout(false);
             this.toolStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -704,19 +737,18 @@
         private System.Windows.Forms.ToolStripMenuItem menuEdit;
         private System.Windows.Forms.ToolStripMenuItem MenuHelp;
         private System.Windows.Forms.ToolStripMenuItem MenuView;
-        private System.Windows.Forms.ToolStripMenuItem summaryToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem bookingToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem paymentToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem bookingPayToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem bookingExtraToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem bookingEditToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem rsRcuseToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem bookingClientToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem transactionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem trandetToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem MenuItemSummary;
+        private System.Windows.Forms.ToolStripMenuItem MenuItemBooking;
+        private System.Windows.Forms.ToolStripMenuItem MenuItemPayment;
+        private System.Windows.Forms.ToolStripMenuItem MenuItemBookingPay;
+        private System.Windows.Forms.ToolStripMenuItem MenuItemBookingExtra;
+        private System.Windows.Forms.ToolStripMenuItem MenuItemBookingEdit;
+        private System.Windows.Forms.ToolStripMenuItem MenuItemRsRcuse;
+        private System.Windows.Forms.ToolStripMenuItem MenuItemBookingClient;
+        private System.Windows.Forms.ToolStripMenuItem MenuItemTransaction;
+        private System.Windows.Forms.ToolStripMenuItem MenuItemTrandet;
         private System.Windows.Forms.ToolStripContainer toolStripContainer;
         private System.Windows.Forms.TabControl tabViews;
-        private System.Windows.Forms.TabPage tabSummary;
         private System.Windows.Forms.DataGridView dgvSummery;
         private System.Windows.Forms.TabPage tabBooking;
         private System.Windows.Forms.ToolStrip toolStrip;
@@ -729,5 +761,8 @@
         private System.Windows.Forms.ToolStripButton btnSearch;
         private System.Windows.Forms.ToolStripButton btnCancel;
         private System.Windows.Forms.ToolStripButton btnClear;
+        private System.Windows.Forms.TabPage tabSummary;
+        private System.Windows.Forms.ErrorProvider errorProvider;
+        private System.Windows.Forms.ToolStripButton btnToday;
     }
 }
